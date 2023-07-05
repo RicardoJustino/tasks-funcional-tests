@@ -3,13 +3,21 @@ package br.ce.wcaquino.tasks.functional;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.Assert;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class TasksTest {
+	
+	@BeforeClass
+	public static void setup() {
+		String chromeDriverPath = System.getProperty("user.dir") + "/src/test/resources/chromedriver";
+		System.setProperty("webdriver.chrome.driver", chromeDriverPath);
 
+	}
+	
 	public WebDriver acessarAplicacao() {
 
 		WebDriver driver = new ChromeDriver();
