@@ -13,7 +13,8 @@ public class TasksTest {
 	
 	@BeforeClass
 	public static void setup() {
-		String chromeDriverPath = System.getProperty("user.dir") + "/src/test/resources/chromedriver";
+		String chromeDriverPath = System.getProperty("user.dir") + "/src/test/resources/chromedriver.exe";
+																    
 		System.setProperty("webdriver.chrome.driver", chromeDriverPath);
 
 	}
